@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QRegularExpressionValidator* validator = new QRegularExpressionValidator(QRegularExpression("UA[\\d-]+"), this);
+    QRegularExpressionValidator* validator = new QRegularExpressionValidator(QRegularExpression("UA[\\d]+"), this);
     ui->textLineEdit->setValidator(validator);
 
     connect(ui->validateButton, &QPushButton::clicked, this, &MainWindow::on_validateButton_clicked);
